@@ -3,6 +3,10 @@
 // we will use it to share data between files
 const store = require('../store');
 
+const playGame = () =>{
+	$('.sq1').on('click', () => console.log('hey'))
+};
+
 const signUpSuccess = function (responseData) {
 	// tell the user it was successful
 	$('#movies-display').text('Signed up successfully!');
@@ -94,5 +98,6 @@ module.exports = {
   changePasswordSuccess,
   changePasswordFailure,
   signOutSuccess,
-  signOutFailure
+  signOutFailure,
+	playGame
 };

@@ -10,6 +10,7 @@
       <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="./app/auth/logic.js" defer></script>
     </head>
     <body>
       <h1>Tic Tac Death</h1>
@@ -17,28 +18,39 @@
       
       <section id="before-sign-in">
         <!-- Sign up form goes here -->
-        <form id="sign-up" class="border">
-          <!-- fieldset is used to group multiple inputs together -->
-          <fieldset>
-            <legend>Sign Up</legend>
-            <input type="email" name="credentials[email]" placeholder="Email" required>
-            <input type="password" name="credentials[password]" placeholder="Password" required>
-            <input type="password" name="credentials[password_confirmation]" placeholder="Password Confirmation" required>
-            <button class="btn btn-primary" type="submit">Sign Up</button>
-          </fieldset>
-        </form>
-        <!-- Sign In form goes here -->
-        <form id="sign-in" class="border">
-          <!-- fieldset is used to group multiple inputs together -->
-          <fieldset>
-            <legend>Sign In</legend>
-            <input type="email" name="credentials[email]" placeholder="Email" required>
-            <input type="password" name="credentials[password]" placeholder="Password" required>
-            <button class="btn btn-success" type="submit">Sign In</button>
-          </fieldset>
-        </form>
-      </section>
+        <div class="everything">
 
+          <div class="ss-form">
+            
+            <div class="card">
+              <div class="card-body">
+                <form id="sign-up" class="border">
+                  <!-- fieldset is used to group multiple inputs together -->
+                  
+                  <fieldset>
+                    <legend>Sign Up</legend>
+                    <input type="email" name="credentials[email]" placeholder="Email" required>
+                    <input type="password" name="credentials[password]" placeholder="Password" required>
+                    <input type="password" name="credentials[password_confirmation]" placeholder="Password Confirmation" required>
+                    <button class="btn btn-primary" type="submit">Sign Up</button>
+                  </fieldset>
+                </form>
+                <!-- Sign In form goes here -->
+                <form id="sign-in" class="border">
+                  <!-- fieldset is used to group multiple inputs together -->
+                  <fieldset>
+                    <legend>Sign In</legend>
+                    <input type="email" name="credentials[email]" placeholder="Email" required>
+                    <input type="password" name="credentials[password]" placeholder="Password" required>
+                    <button class="btn btn-success" type="submit">Sign In</button>
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        </section>
+        
       <!-- only want to be visible after we sign-in
         by default it should not be displayed 
         our scss will help us with that-->
@@ -84,33 +96,44 @@
   </div>
 </nav>
         <!-- required 'container' class wrapper for our rows/columns -->
-    
-      <div class="container">
-          <!-- <h1>3x3 Grid small</h1>
-          <h2>Let's make some grids!</h2> -->
-          
-            <div class="col-4 box">1box</div>
-            <div class="col-4 box">2box</div>
-            <div class="col-4 box">3box</div>
-          
-          
-            <div class="col-4 box">4box</div>
-            <div class="col-4 box">5box</div>
-            <div class="col-4 box">6box</div>
-          
-          
-            <div class="col-4 box">7box</div>
-            <div class="col-4 box">8box</div>
-            <div class="col-4 box">9box</div>
-          
-          </div>
-        
+        <div class="tictactoeboard">
 
+          <div class="card" style="width: 40rem;">
+            <div class="card-body">
+              
+              <div class="container">
+                <!-- <h1>3x3 Grid small</h1>
+                  <h2>Let's make some grids!</h2> -->
+                  
+                  <div class="col-4 box" id="sq1">1box</div>
+                  <div class="col-4 box" id="sq2">2box</div>
+                  <div class="col-4 box" id="sq3">3box</div>
+                  
+                  
+                  <div class="col-4 box" id="sq4">4box</div>
+                  <div class="col-4 box" id="sq5">5box</div>
+                  <div class="col-4 box" id="sq6">6box</div>
+                  
+                  
+                  <div class="col-4 box" id="sq7">7box</div>
+                  <div class="col-4 box" id="sq8">8box</div>
+                  <div class="col-4 box" id="sq9">9box</div>
+                  
+                </div>
+                
+              </div>
+            </div>
+          </div>
+            
           <!-- Code along modal -->
           <!-- Button trigger modal -->
+          <div class="buttons">
+            <button id="startGame">Play Game</button>
+            <button id="resetBtn">Rest Game</button>
+        </div>
           <div class="b-out">
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">B***h Out</button>
-</div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">B***h Out</button>
+          </div>
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
